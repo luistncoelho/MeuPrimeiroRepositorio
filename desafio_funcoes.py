@@ -21,11 +21,11 @@ def analisar_dados(dados):
 
 def definir_status(status):
     if status[1] > 5000:
-        print('Alta Performance')
+        return 'Alta Performance'
     elif status[1] >= 2000 and status[1] < 5000:
-        print('Performance Estável')
+        return 'Performance Estável'
     elif status[1] < 2000:
-        print('Performance Crítica')
+        return 'Performance Crítica'
 
 
 lista_limpa = list()
@@ -50,6 +50,7 @@ print('-'*20)
 print(f'Total = {total_media[0]:.2f}')
 print(performance)
 print(f'Media = {total_media[1]:.2f}')
+print('Vendas:')
 for i in vendas_validas:
-    print(f'Vendas\n{c+1} - {i:.2f}')
+    print(f'{c+1} - {i:.2f}')
     c += 1
